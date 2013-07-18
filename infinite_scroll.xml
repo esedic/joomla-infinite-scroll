@@ -26,6 +26,14 @@
             <fieldset
                 name="basic"
             >
+                <field
+                    name="wrapper_selector"
+                    required="required"
+                    type="text"
+                    default=".blog"
+                    label="Wrapper Selector String"
+                    description=""
+                />
                 <field 
                     name="categories" 
                     type="category" 
