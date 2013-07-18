@@ -57,7 +57,7 @@ class plgContentInfinite_Scroll extends JPlugin
 	                        finishedMsg : '" . $params->get('end_msg') ."',
 	                        msgText     : '" . $params->get('loading_msg') ."'
 	                    })
-					});
+			});
                 ";
                 $doc->addScriptDeclaration($content);
             }
