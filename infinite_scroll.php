@@ -46,7 +46,7 @@ class plgContentInfinite_Scroll extends JPlugin
                 }
                 $doc->addScript(JURI::root(true) . '/plugins/content/infinite_scroll/js/jquery.infinitescroll.min.js');
                 $content = "
-    				$(function(){
+    			$(function(){
 	                    $('" . $params->get('wrapper_selector') . "').infinitescroll({
 	                        container   : '" . $params->get('container_selector') . "',
 	                        navSelector : '" . $params->get('nav_selector') . "',
