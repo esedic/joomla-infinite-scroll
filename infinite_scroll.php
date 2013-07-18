@@ -46,16 +46,18 @@ class plgContentInfinite_Scroll extends JPlugin
                 }
                 $doc->addScript(JURI::root(true) . '/plugins/content/infinite_scroll/js/jquery.infinitescroll.min.js');
                 $content = "
-                    window.InfiniteConfig = {
-                        container   : '" . $params->get('container_selector') . "',
-                        navSelector : '" . $params->get('nav_selector') . "',
-                        nextSelector: '" . $params->get('next_selector') . "',
-                        itemSelector: '" . $params->get('item_selector') . "',
-                        contentSelector: '" . $params->get('content_selector') . "',
-                        baseURL     : '',
-                        finishedMsg : '" . $params->get('end_msg') ."',
-                        msgText     : '" . $params->get('loading_msg') ."'
-                    }
+    				$(function(){
+	                    $('" . $params->get('wrapper_selector') . "').infinitescroll({
+	                        container   : '" . $params->get('container_selector') . "',
+	                        navSelector : '" . $params->get('nav_selector') . "',
+	                        nextSelector: '" . $params->get('next_selector') . "',
+	                        itemSelector: '" . $params->get('item_selector') . "',
+	                        contentSelector: '" . $params->get('content_selector') . "',
+	                        baseURL     : '',
+	                        finishedMsg : '" . $params->get('end_msg') ."',
+	                        msgText     : '" . $params->get('loading_msg') ."'
+	                    })
+					});
                 ";
                 $doc->addScriptDeclaration($content);
             }
